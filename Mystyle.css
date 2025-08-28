@@ -1,24 +1,94 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;color:#0f0f0f;background:#fff}
+header{padding:18px 60px 0}
+
 nav{
-    padding-right: 10px;
-    margin-right: 10px;
-    float: right;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #0077b6;
+  display:flex;
+  justify-content:flex-end;     
+  gap:28px;
+  padding:10px 60px 16px;
+  background:#fff;               
+  font-weight:600;
 }
 
-img{
-    width: 80px;
-    height: 100px;
-    border: 2px;
-    border-style: solid;
-    border-color: red;
+nav a{
+  text-decoration:none;
+  color:#111;
+  padding-bottom:6px;
 }
+
+nav a:hover{
+  color:#0077b6;
+  border-bottom:3px solid #0077b6; 
+}
+
+
+section{
+  max-width:1100px;
+  margin:0 auto;
+  padding:48px 60px 24px;
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;  
+  align-items:center;
+  column-gap:48px;
+}
+
+
+section h2{font-size:44px;line-height:1.1;margin-bottom:6px}
+section h3{font-size:44px;line-height:1.1;margin-bottom:2px;color:#0077b6}
+section h4{font-size:32px;color:#333;margin-top:4px}
+
+a > input[type="submit"]{
+  margin-top:22px;
+  padding:12px 26px;
+  background:#0077b6;
+  color:#fff;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+a > input[type="submit"]:hover{background:#0096c7}
+
 aside{
-margin-bottom: 50px;
-    float:right;
+  grid-column:2;                 
+  display:flex;
+  justify-content:flex-end;     
+}
 
-    background-color:violet;
+aside img{
+  width:300px;
+  height:300px;
+  object-fit:cover;
+  border-radius:50%;             
+  border:6px solid #eee;
+  display:block;
 }
-img{
-    border-radius: 100px;
+
+
+footer{
+  max-width:1100px;
+  margin:0 auto;
+  padding:24px 60px 48px;
 }
+
+footer a{
+  margin-right:18px;
+  color:#0077b6;
+  text-decoration:none;
+  font-weight:500;
+}
+
+footer a:hover{text-decoration:underline}
+
+@media (max-width:820px){
+  section{
+    grid-template-columns:1fr;
+    row-gap:24px;
+  }
+
+  aside{grid-column:1;justify-content:flex-start}
+  aside img{width:220px;height:220px}
+}
+ 
