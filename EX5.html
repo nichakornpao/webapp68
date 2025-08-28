@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Rows</title>
+<style>
+ 
+  fieldset.preview{
+    width: 860px;
+    border: 1px solid #cfcfd4;
+    padding: 10px 12px;
+    background: #fff;
+  }
+  fieldset.preview legend{
+    font-weight: 700;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+
+  .gallery-vertical{
+    height: 260px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #ddd;
+    background: #f8f8f8;
+    padding: 8px;
+    scroll-snap-type: y mandatory; 
+  }
+
+
+  .row{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    scroll-snap-align: start;
+  }
+
+  .card{
+    flex: 0 0 160px;
+    height: 160px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 0 0 1px #e6e6e6 inset;
+  }
+  .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+</style>
+</head>
+<body>
+
+<fieldset class="preview">
+  <legend>Preview:</legend>
+
+  <div class="gallery-vertical" aria-label="Vertical scrolling rows that snap">
+    <div class="row">
+  <div class="card"><img src="Irene.jfif" alt="Princess"></div>
+  <div class="card"><img src="Irene2.jfif" alt="Princess"></div>
+  <div class="card"><img src="Joy.jfif" alt="Princess"></div>
+  <div class="card"><img src="Joy2.jfif" alt="Princess"></div>
+  <div class="card"><img src="seulgi.jfif" alt="Princess"></div>
+    </div>
+
+<div class="row">
+  <div class="card"><img src="seulgi2.jfif" alt="Princess"></div>
+  <div class="card"><img src="wendy.jfif" alt="Princess"></div>
+  <div class="card"><img src="wendy2.jfif" alt="Princess"></div>
+  <div class="card"><img src="Yeri.jfif" alt="Princess"></div>
+  <div class="card"><img src="Yeri2.jfif" alt="Princess"></div>
+    </div>
+  </div>
+</fieldset>
+
+</body>
+</html>
